@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Pixelify+Sans:wght@400..700&family=Rubik+Pixels&display=swap" rel="stylesheet"> rel="stylesheet">
+    <script src="https://unpkg.com/nipplejs@0.9.0/dist/nipplejs.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <div id="loading-screen">
+        <div class="loader-content">
+            <h1 class="loader-title">LOADING WORLD...</h1>
+            <div class="loader-bar">
+                <div id="progress-indicator"></div>
+            </div>
+            <p class="loader-text" id="loader-status-text">Initializing Systems...</p>
+            <p class="loader-instructions" id="instructions-text">Click/Touch items to access Files</p>
+            <button id="enter-button" class="hidden">ENTER</button>
+        </div>
+    </div>
+
+
+    <div id = "experience">
+        <canvas id="experience-canvas"></canvas>
+    </div>
+    
+    <div class="model hidden">
+        <div class="model-wrapper">
+            <div class="model-header">
+                <h1 class="model-title">ProjectOne</h1>
+                <button class="model-exit-button">exit</button>
+            </div>
+            <div class="model-content">
+                <div class="model-content-wrapper">
+                    <div class="model-project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus aspernatur voluptate temporibus nesciunt rem in tempora recusandae eaque sit. Quisquam cumque incidunt modi dignissimos corporis hic perspiciatis animi tempora delectus.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="joystick-container"></div>
+    <button id="run-button">RUN</button>
+
+
+    <button id="hdri-change-button" class="cube-toggle-button" > 
+        <img src = "./Assets/Icons/dayIcon.png" alt="Light Icon" class = "button-icon" >
+    </button>
+
+    <button id="music-button" class="cube-toggle-button playing"> 
+        <img src = "./Assets/Icons/nightIcon.png" alt="Music Icon" class = "button-icon" >
+    </button>
+
+
+    <audio id="background-music" loop>
+        <source src="./Assets/Audio/GameMusic.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="click-sound" src="./Assets/Audio/buttonClick.mp3" preload="auto"></audio>
+
+    <script type="importmap">
+        {
+            "imports": 
+            {
+            "three": "https://cdn.jsdelivr.net/npm/three@v0.149.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@v0.149.0/examples/jsm/"
+            }
+        }   
+</script>
+
+    <script type = "module" src = "./main.js"></script>
+
+</body>
+</html>
